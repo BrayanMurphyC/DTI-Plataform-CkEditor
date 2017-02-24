@@ -1,0 +1,19 @@
+= form_for @subscriber do |f|
+  - if @subscriber.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@subscriber.errors.count, "error")} prohibited this subscriber from being saved:"
+      %ul
+        - @subscriber.errors.full_messages.each do |msg|
+          %li= msg
+
+  .fields
+    = f.label :nombres
+    = f.text_field :nombres , class: "field-sub"
+    = f.label :apellidos
+    = f.text_field :apellidos , class: "field-sub"
+    = f.label :correo
+    = f.text_field :correo , class: "field-sub"
+    = f.label :preferencias
+    = f.text_field :preferencias , class: "field-sub", placeholder: "Ejemplo: Emprendimiento,Innovacion,etc"
+  .actions
+    = f.submit 'Suscribirse', class: "sus-btn"

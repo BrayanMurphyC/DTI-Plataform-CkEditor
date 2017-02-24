@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Nombres:
+  = @subscriber.nombres
+%p
+  %b Apellidos:
+  = @subscriber.apellidos
+%p
+  %b Correo:
+  = @subscriber.correo
+%p
+  %b Preferencias:
+  = @subscriber.preferencias
+
+= link_to 'Edit', edit_subscriber_path(@subscriber)
+\|
+= link_to 'Back', subscribers_path

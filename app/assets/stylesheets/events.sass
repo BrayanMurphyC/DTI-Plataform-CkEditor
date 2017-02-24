@@ -1,0 +1,212 @@
+.cover
+  width: 100%
+  height: 350px
+  background-size: cover
+  background-position: center center
+  background-repeat: no-repeat no-repeat
+  display: flex
+  position: relative
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  font-family: 'Open Sans', sans-serif
+  .overlay-header
+    background-image: url(overlay-pattern.png)!important
+    background-repeat: repeat
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 0
+    opacity: .7
+  .titulo
+    color: white
+    position: relative
+    text-transform: uppercase
+    font-size: 50px
+    margin-bottom: 20px
+  .fecha
+    margin-bottom: 30px
+    position: relative
+  .is-countdown
+    border: 1px solid rgba(204, 204, 204, 0)
+    background-color: transparent
+    width: 400px
+    .countdown-row
+      display: flex
+      justify-content: center
+    .countdown-section
+      color: #313131
+      position: relative
+      border: 1px solid white
+      width: 80px
+      padding: 2px
+      background-color: rgba(white, 1)
+      border-radius: 4px
+      margin:
+        left: 5px
+        right: 5px
+      // &:last-child
+      //   display: none
+  .status
+    display: flex
+    justify-content: space-around
+    width: 250px
+    position: relative
+    .likes, .views
+      width: 100%
+      display: flex
+      justify-content: space-around
+      color: white
+      // border: 1px solid white
+      background-color: #ff5252
+      border-radius: 4px
+      width: 100px
+      padding: 3px
+      i
+        font-size: 20px
+      font
+        font-size: 16px
+        display: flex
+        justify-content: center
+        align-items: center
+
+
+.contenido
+  width: 100%
+  display: flex
+  justify-content: center
+  font-family: 'Roboto', sans-serif
+  margin-top: 20px
+  .contenido-wrap
+    width: 800px
+    .info
+      display: flex
+      justify-content: flex-start
+      font
+        margin-right: 30px
+        color: #4B4B4B
+        font-family: 'Roboto', sans-serif
+    .line
+      width: 100%
+      height: 1px
+      background-color: rgba( #e0e0e0, .6)
+      margin-top: 15px
+      margin-bottom: 5px
+    .body-event-main
+      width: 100%
+      color: #4B4B4B
+      font-family: 'Roboto', sans-serif
+      font-size: 15px
+      font-weight: normal
+      text-align: justify
+      line-height: 1.5
+      p
+        img
+          width: 100%
+        a
+          color: steelblue
+          text-decoration: none
+    .tags
+      width: 100%
+      display: flex
+      margin-top: 10px
+      margin-bottom: 10px
+      p
+        background-color: #e8e8e8
+        color: #4B4B4B
+        margin-right: 10px
+        text-transform: capitalize
+        font-size: 13px
+        padding:
+          top: 8px
+          bottom: 8px
+          left: 15px
+          right: 15px
+        border-radius: 10px
+
+
+.eventos
+  width: 100%
+  display: flex
+  justify-content: center
+  .eventos-wrap
+    width: 900px
+    display: flex
+    flex-wrap: wrap
+    .event-list
+      display: flex
+      width: 33.333%
+      flex-direction: column
+      padding: 10px
+      box-sizing: border-box
+      .event-item
+        display: flex
+        align-items: center
+        box-shadow: 0 0 4px 2px rgba(0,0,0,.1)
+        text-decoration: none
+        margin-bottom: 20px
+        border-radius: 6px
+        overflow: hidden
+        background-color: whitesmoke
+        flex-direction: column
+        .fecha-evento
+          display: flex
+          justify-content: center
+          text-align: center
+          align-items: center
+          background-color: #ff5252
+          box-shadow: 0 0 10px 2px rgba(0,0,0,.1)
+          height: 80px
+          margin-top: -40px
+          border-radius: 50%
+          width: 80px
+          font-family: 'Open Sans', sans-serif
+          color: white
+          text-transform: uppercase
+          border: 4px solid whitesmoke
+        .body-evento
+          font-family: 'Open Sans', sans-serif
+          display: flex
+          justify-content: center
+          align-items: center
+          flex-direction: column
+          h2
+            font-size: 16px
+            color: #4B4B4B
+        .date-info
+          font-family: 'Roboto', sans-serif
+          color: #4B4B4B
+          display: flex
+          margin-top: -20px
+          width: 100%
+          margin-top: 5px
+          margin-bottom: 5px
+          flex-direction: column
+          .lugar-event, .hora-event
+            width: 100%
+            display: flex
+            justify-content: center
+            text-align: center
+            // flex-direction: column
+            p
+              font-size: 13px
+              margin-right: 10px
+
+
+        .logo-event
+          width: 100%
+          // height: 157px
+          img
+            width: 100%
+    .btn_admin
+      width: 100%
+      display: flex
+      justify-content: space-around
+      align-items: center
+      // flex-direction: column
+      a
+        text-decoration: none
+        color: #4B4B4B
+        font-size: 20px

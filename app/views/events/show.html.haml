@@ -1,0 +1,32 @@
+%p#notice= notice
+%section.cover{"data-stellar-background-ratio" => "0.5", :style => "background-image: url('#{@event.cover.url(:medium)}');"}
+  .overlay-header
+  %h2.titulo
+    = @event.title
+  .fecha
+  .status
+    .views
+      %i ♥
+      %font= @event.view_count
+    .likes
+      %i ☺
+      %font= @event.view_count
+%section.contenido
+  .contenido-wrap
+    .info
+      %font
+        Publicado hace : #{time_ago_in_words(@event.created_at)}
+      %font
+        Por: #{@user.email}
+    .line
+    .body-event-main
+      = raw @event.body
+    .tags
+      - @tags.each do |tag|
+        %p= tag
+= link_to 'Edit', edit_event_path(@event)
+|
+= link_to 'Back', events_path
+= javascript_tag do
+  $(".fecha").countdown({
+  until: new Date(#{@event.start.year}, #{@event.start.month}-1, #{@event.start.day}, #{@event.start.hour},  #{@event.start.min})});

@@ -1,0 +1,26 @@
+%p#notice= notice
+.eventos
+  .eventos-wrap
+    - @events.each do |event|
+      .event-list
+        = link_to event, :action => 'show', class: "event-item"  do
+          .logo-event= image_tag event.photo.url(:medium)
+          .fecha-evento
+            = event.start.day
+            %br
+            = l(event.start , format: :more_short_month)
+          .body-evento
+            %h2= event.title
+          .date-info
+            .lugar-event
+              %p.icons-date ☉
+              %p= event.lugar
+            .hora-event
+              %p.icons-date ⌛
+              %p= l(event.start , format: :short_hour)
+
+        .btn_admin
+          = link_to '✍', edit_event_path(event)
+          = link_to '✕', event, method: :delete, data: { confirm: 'Seguro que quieres eliminar este evento?' }
+%br/
+= link_to 'New Event', new_event_path
